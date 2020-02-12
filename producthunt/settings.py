@@ -1,7 +1,8 @@
 
-
 import os
 from pathlib import Path
+import dj_database_url
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -13,9 +14,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '0res%nkt@)0z-f=ap0@g#ps!a@isz=+9v8z@x+(b_65hywud4_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','herokuapp.com']
 
 
 # Application definition
@@ -39,6 +40,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'producthunt.urls'
@@ -66,10 +68,8 @@ WSGI_APPLICATION = 'producthunt.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    'default': dj_database_url.config()
+
 }
 
 
@@ -111,7 +111,7 @@ USE_TZ = True
 STATICFILES_DIRS = [Path(BASE_DIR, 'producthunt/static/')]
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFiles'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
