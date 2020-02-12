@@ -1,0 +1,32 @@
+averaging of 32 scans?
+MRMR?
+in NIR spectroscopy control fruits were pores were made to them also?
+Brix value?
+MRL calibration model?
+spectra? 576 and 432
+PLS-DA?
+calibration and validation in NIR spectroscopy?
+sample presentation in NIR spectroscopy?
+distance between source and detector for better spatial resolution?
+hyperspectral imaging configuration?
+
+
+
+
+
+solution:
+
+Brix value : TSS can be measured using either a Brix scale hydrometer or a refractometer and reported as “degrees Brix” (?Brix) which is equivalent to percentage (%). 
+In principle, the unit ?Brix, which has been in common use in industry for many years, represents the dry substance content of solutions containing mainly sucrose
+TSS or Brix represents the percentage by mass of total soluble solids of a pure aqueous sucrose solution 
+For example, a juice sample that has 25 degree of Brix is assumed to contain 25 g of sugar/100 g of solution
+
+
+
+NIR spectrscopy : in NIR spectroscopy both control and infested mangoes are subjected to pores using sterile sewing needle(0.4 mm diameter)
+
+
+hyperspectral camera configuration is there in report of 2nd article of year 2017
+
+MLR calibration model : Multiple linear regression attempts to model the relationship between two or more explanatory variables and a response variable by fitting a 
+linear equation to observed data. Every value of the independent variable x is associated with a value of the dependent variable y. 
