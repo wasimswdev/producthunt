@@ -16,7 +16,7 @@ SECRET_KEY = '0res%nkt@)0z-f=ap0@g#ps!a@isz=+9v8z@x+(b_65hywud4_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','herokuapp.com','producthunts.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','herokuapp.com','producthunts.herokuapp.com'] 
 
 
 # Application definition
@@ -68,16 +68,12 @@ WSGI_APPLICATION = 'producthunt.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default':   {
-        'ENGINE': 'django.db.backends.sqlite3_psycopg2',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }                               #dj_database_url.config()
+    'default': dj_database_url.config()
 
 }
 
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+
 
 
 # Password validation
